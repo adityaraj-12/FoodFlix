@@ -1,0 +1,114 @@
+/* CreateFood.css - styles for the create food form, using theme variables */
+:root {
+  --cf-bg: #fff;
+  --cf-text: #222f3e;
+  --cf-input-bg: #f1f2f6;
+  --cf-input-border: #dfe4ea;
+  --cf-label: #636e72;
+  --cf-btn-bg: #218c74;
+  --cf-btn-bg-hover: #0097a7;
+  --cf-btn-text: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cf-bg: #181c1f;
+    --cf-text: #f1f2f6;
+    --cf-input-bg: #23272b;
+    --cf-input-border: #2d3436;
+    --cf-label: #b2bec3;
+    --cf-btn-bg: #26de81;
+    --cf-btn-bg-hover: #20b86a;
+    --cf-btn-text: #181c1f;
+  }
+}
+.create-food-container {
+  max-width: 420px;
+  margin: 32px auto;
+  padding: 24px 20px;
+  border-radius: 16px;
+  background: var(--cf-bg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  color: var(--cf-text);
+  font-family: inherit;
+}
+.create-food-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.create-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.create-food-label {
+  font-size: 1rem;
+  color: var(--cf-label);
+  margin-bottom: 6px;
+}
+.create-food-input, .create-food-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--cf-input-border);
+  background: var(--cf-input-bg);
+  color: var(--cf-text);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.create-food-input:focus, .create-food-textarea:focus {
+  border-color: var(--cf-btn-bg);
+}
+.create-food-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.create-food-btn {
+  margin-top: 10px;
+  background: var(--cf-btn-bg);
+  color: var(--cf-btn-text);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.create-food-btn:hover {
+  background: var(--cf-btn-bg-hover);
+}
+.create-food-video-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cf-input-bg);
+  color: var(--cf-text);
+  border: 1.5px solid var(--cf-input-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border 0.2s, background 0.2s;
+  margin-bottom: 8px;
+}
+.create-food-video-label:hover,
+.create-food-video-label:focus-within {
+  border-color: var(--cf-btn-bg);
+  background: var(--cf-input-bg);
+}
+.create-food-video-label svg {
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .create-food-container {
+    padding: 16px 4vw;
+    max-width: 98vw;
+  }
+}
+
+.skip{
+  text-align: center;
+}

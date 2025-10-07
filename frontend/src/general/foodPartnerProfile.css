@@ -1,0 +1,132 @@
+/* Light/dark mode variables */
+:root {
+  --profile-bg: #fff;
+  --profile-text: #222f3e;
+  --profile-subtle: #f1f2f6;
+  --profile-accent: #218c74;
+  --profile-border: #dfe4ea;
+  --profile-card: #e0f7fa;
+  --profile-card2: #e0f2f1;
+  --profile-muted: #636e72;
+  --profile-thumb: #b2bec3;
+  --profile-thumb-hover: rgba(33,140,116,0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --profile-bg: #181c1f;
+    --profile-text: #f1f2f6;
+    --profile-subtle: #23272b;
+    --profile-accent: #26de81;
+    --profile-border: #2d3436;
+    --profile-card: #22313f;
+    --profile-card2: #1e272e;
+    --profile-muted: #b2bec3;
+    --profile-thumb: #353b48;
+    --profile-thumb-hover: rgba(38,222,129,0.12);
+  }
+}
+.profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 16px;
+  background: #101f3007;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-family: inherit;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #218c74;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-info .profile-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #222f3e;
+  background: #e0f7fa;
+  border-radius: 6px;
+  padding: 4px 10px;
+  width: fit-content;
+}
+
+.profile-info .profile-address {
+  font-size: 0.98rem;
+  color: #9dc4c9;
+  background: #e0f2f1;
+  border-radius: 6px;
+  padding: 4px 10px;
+  width: fit-content;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background: #b9c3eb;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.profile-stat {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-stat-label {
+  font-size: 0.95rem;
+  color: #636e72;
+}
+
+.profile-stat-value { 
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--profile-accent);
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.profile-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 10px; */
+}
+
+.profile-info .profile-address {
+  font-size: 0.98rem;
+  color: var(--profile-accent);
+  background: var(--profile-card2);
+  border-radius: 6px;
+  padding: 4px 10px;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.profile-video-thumb:hover {
+  box-shadow: 0 2px 8px rgba(33,140,116,0.15);
+}

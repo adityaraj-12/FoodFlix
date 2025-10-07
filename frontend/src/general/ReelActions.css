@@ -1,0 +1,64 @@
+/* ReelActions.css - right side actions and bottom nav for reels UI */
+.reel-actions {
+  position: absolute;
+  right: 18px;
+  bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+  z-index: 3;
+}
+.reel-action-btn {
+  background: rgba(0,0,0,0);
+  border: none;
+  /* border-radius: 16px; */
+  /* padding: 10px 14px; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.reel-action-btn:hover {
+  background: rgba(33,140,116,0.25);
+}
+.reel-action-label {
+  font-size: 0.7rem;
+  margin-top: 2px;
+  color: #fff;
+}
+
+.reel-bottom-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 7%;
+  background: var(--reels-bg, #181c1f);
+  border-top: 1.5px solid var(--reels-btn-bg, #db4242);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+.reel-bottom-nav-btn {
+  background: none;
+  border: none;
+  color: var(--reels-user, #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+}
+.reel-bottom-nav-btn.active {
+  color: var(--reels-btn-bg, #db4242);
+}
+.reel-bottom-nav-label {
+  font-size: 0.3rem;
+  margin-top: 2px;
+}

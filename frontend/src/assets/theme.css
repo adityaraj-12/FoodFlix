@@ -1,0 +1,15 @@
+:root {
+  --color-bg: #ebe1e1;
+  --color-text: #181818;
+  --color-primary: #4f8cff;
+  --color-border: #2e1313;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #202020;
+    --color-text: #e2dfdf;
+    --color-primary: #4f8cff;
+    --color-border: #333;
+  }
+}
